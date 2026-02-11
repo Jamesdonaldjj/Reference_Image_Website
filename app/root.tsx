@@ -31,7 +31,7 @@ export default function  Layout() {
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <ThemeProvider theme={darkTheme}>
         <SideBar />
-        <main style={{ flexGrow: 1 }}>
+        <main style={{ marginTop: 64, marginLeft: 240, flexGrow: 1 }}>
           <Outlet />
         </main>
       </ThemeProvider>
