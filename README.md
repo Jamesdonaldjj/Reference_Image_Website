@@ -1,4 +1,4 @@
-A website to store reference images used for art. Made with React router and Material-UI.
+A website to store reference images used for art. Made with React and Material-UI.
 
 ## Getting Started
 
