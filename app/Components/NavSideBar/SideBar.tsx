@@ -15,8 +15,8 @@ const drawerWidth = "240px";
 
 const NavPages = [
   { name: 'Gallery', path: '/gallery' },
-  { name: 'Image of the Day', path: '/image-of-the-day' },
-  { name: 'Random Image', path: '/random-image' },
+  { name: 'Image of the Day', path: '/gallery/image-of-the-day' },
+  { name: 'Random Image', path: '/gallery/random' },
   { name: 'About', path: '/about' },
 ];
 

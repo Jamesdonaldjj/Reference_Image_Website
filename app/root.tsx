@@ -6,30 +6,37 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-
+import createTheme from "node_modules/@mui/material/esm/styles/createTheme";
 import type { Route } from "./+types/root";
 import "./app.css";
+import { Box, ThemeProvider } from "@mui/material";
+import SideBar from "./Components/NavSideBar/SideBar";
 
-export function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
-      </body>
-    </html>
-  );
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "Reference Gallery App" },
+    { name: "description", content: "Welcome to React Router!" },
+  ];
 }
 
-export default function App() {
-  return <Outlet />;
+const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+  });
+
+
+export default function  Layout() {
+  return (
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <ThemeProvider theme={darkTheme}>
+        <SideBar />
+        <main style={{ flexGrow: 1 }}>
+          <Outlet />
+        </main>
+      </ThemeProvider>
+    </Box>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
