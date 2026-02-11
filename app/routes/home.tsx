@@ -22,10 +22,10 @@ const darkTheme = createTheme({
 export default function Home() {
   return (
     <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <Box sx={ { display: 'flex' } }>
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
         <Sidebar />
-        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        <Box component="main" sx={{ height: '100vh', flexGrow: 1, p: 3}}>
           <Welcome />
         </Box>
       </Box>
