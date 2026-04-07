@@ -4,7 +4,7 @@ export default [
     index("routes/home.tsx"),
         route("about","routes/about.tsx"),
         route("gallery", "routes/gallery.tsx", [
-            route(":imageId", "routes/imageDetails.tsx"),
+            //route(":imageId", "routes/imageDetails.tsx"),
         ])
 ] satisfies RouteConfig;
 

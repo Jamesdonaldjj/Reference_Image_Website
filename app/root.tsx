@@ -15,8 +15,7 @@ import SideBar from "./Components/NavSideBar/SideBar";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Reference Gallery App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
+    { name: "description", content: "A reference image gallery for artists and designers" },];
 }
 
 const darkTheme = createTheme({
@@ -34,6 +33,8 @@ export default function  Layout() {
         <main style={{ marginTop: 64, marginLeft: 240, flexGrow: 1 }}>
           <Outlet />
         </main>
+        <ScrollRestoration />
+        <Scripts />
       </ThemeProvider>
     </Box>
   );
