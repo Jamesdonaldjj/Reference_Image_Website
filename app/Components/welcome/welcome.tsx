@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import Box from '@mui/material/Box';
 import { Button } from "@mui/material";
+import { NavLink } from "react-router";
 
 export function Welcome() {
 
@@ -15,9 +16,11 @@ export function Welcome() {
             <Typography variant="h5" component="h2" className="text-center">
               This is a work in progress, but feel free to explore and check back for updates!
             </Typography>
-            <Button sx={{ mt: 4 }} variant="contained" color="primary">
-              Explore Gallery
-            </Button>
+            <NavLink to="/gallery" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Button sx={{ mt: 4 }} variant="contained" color="primary">
+                Explore Gallery
+              </Button>
+            </NavLink>
           </Box>
       </Box>
   );

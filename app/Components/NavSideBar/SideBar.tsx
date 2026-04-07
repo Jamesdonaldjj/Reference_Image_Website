@@ -9,14 +9,14 @@ import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router';
 
 const drawerWidth = "240px";
 
 const NavPages = [
   { name: 'Gallery', path: '/gallery' },
-  { name: 'Image of the Day', path: '/gallery/image-of-the-day' },
-  { name: 'Random Image', path: '/gallery/random' },
+  //{ name: 'Image of the Day', path: '/gallery/image-of-the-day' },
+  //{ name: 'Random Image', path: '/gallery/random' },
   { name: 'About', path: '/about' },
 ];
 
@@ -34,13 +34,16 @@ const classes ={
 export default function SideBar() {
 
   return (
+    
   <Box component="nav" sx={{ display: 'flex' }}>
     <CssBaseline />
     <AppBar position="fixed" sx={{ flexGrow: 1, zIndex: (theme) => theme.zIndex.drawer + 1 }}>
       <Toolbar>
-        <Typography variant="h6" noWrap component="div">
-          Reference Image Gallery (Work in Progress)
-        </Typography>
+        <NavLink to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Typography variant="h6" noWrap component="div">
+            Reference Image Gallery (Work in Progress)
+          </Typography>
+        </NavLink>
       </Toolbar>
     </AppBar>
     <Drawer
@@ -54,13 +57,12 @@ export default function SideBar() {
             <ListItem 
               key={page.name}
               disablePadding
-              onClick={() => {
-                window.location.href = page.path;
-              }}
             >
-              <ListItemButton>
-                <ListItemText primary={page.name} />
-              </ListItemButton>
+              <NavLink to={page.path} style={{ textDecoration: 'none', color: 'inherit', width: '100%' }}>
+                 <ListItemButton sx={{ textAlign: 'center' }}>
+                    <ListItemText primary={page.name} />
+                  </ListItemButton>
+              </NavLink>
             </ListItem>
           ))}
         </List>
