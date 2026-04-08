@@ -15,19 +15,22 @@ import SideBar from "./Components/NavSideBar/SideBar";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Reference Gallery App" },
-    { name: "description", content: "A reference image gallery for artists and designers" },];
+    {
+      name: "description",
+      content: "A reference image gallery for artists and designers",
+    },
+  ];
 }
 
 const darkTheme = createTheme({
-    palette: {
-      mode: 'dark',
-    },
-  });
+  palette: {
+    mode: "dark",
+  },
+});
 
-
-export default function  Layout() {
+export default function Layout() {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <ThemeProvider theme={darkTheme}>
         <SideBar />
         <main style={{ marginTop: 64, marginLeft: 240, flexGrow: 1 }}>
