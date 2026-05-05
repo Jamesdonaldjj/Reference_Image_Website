@@ -29,7 +29,6 @@ export default function GalleryComponent() {
   }, [page]);
 
   const handlePageChange = (event: React.ChangeEvent<unknown>, newPage: number) => {
-    console.log("Page changed to:", newPage);
     setPage(newPage);
   };
 

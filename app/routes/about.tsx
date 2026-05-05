@@ -18,7 +18,7 @@ export default function About() {
         sx={{
           mt: 4,
           display: "flex",
-          width: "75%",
+          width: "65%",
           justifyContent: "center",
           alignItems: "center",
           bgcolor: "#094179",
@@ -31,7 +31,7 @@ export default function About() {
           "About"
         </Typography>
       </Box>
-      <Box sx={{ display: "flex", justifyContent: "center", width: "75%", flexDirection: "column", alignItems: "center", bgcolor: textareaBackgroundColor, p: 1, color: textColor, border: `1px solid ${borderColor}`, boxShadow: `0 4px 8px 0 ${borderColor}`, fontSize: "1.2rem", borderRadius: 1 }}>
+      <Box sx={{ display: "flex", justifyContent: "center", width: "65%", flexDirection: "column", alignItems: "center", bgcolor: textareaBackgroundColor, p: 1, color: textColor, border: `1px solid ${borderColor}`, boxShadow: `0 4px 8px 0 ${borderColor}`, fontSize: "1.2rem", borderRadius: 1 }}>
         <Typography variant="h6" component="p" sx={{ textAlign: "center", mt: 2, width: textAreaWidth }}>
           This website is a reference image website built using React and Material-UI. It is designed to provide users with a collection of high-quality images for various purposes, such as design inspiration, educational resources, or simply for enjoyment. The gallery features a wide range of images, including landscapes, portraits, abstract art, and more. Users can browse through the gallery, view individual images in detail, and even download them for personal use. The website is continuously updated with new images to ensure a fresh and diverse collection for users to explore.
         </Typography>

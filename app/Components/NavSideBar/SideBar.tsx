@@ -10,8 +10,9 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import { NavLink } from "react-router";
+import Button from "@mui/material/Button";
 
-const drawerWidth = "240px";
+const drawerWidth = "200px";
 
 const NavPages = [
   { name: "Gallery", path: "/gallery" },
@@ -30,6 +31,8 @@ const classes = {
     [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: "border-box" },
   },
 };
+
+
 
 export default function SideBar() {
   return (
@@ -51,6 +54,12 @@ export default function SideBar() {
         <Toolbar />
         <Box sx={{ overflow: "auto" }}>
           <List>
+            <Button variant="contained"
+              sx={{mt:4, mb:3, width:"100%", borderRadius:"'16px'"}} 
+              onClick={()=>{console.log("This will open a dialog box to create a new Image")}}
+            >
+              New Image
+            </Button>
             {NavPages.map((page) => (
               <ListItem key={page.name} disablePadding>
                 <NavLink

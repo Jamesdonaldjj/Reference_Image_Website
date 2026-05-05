@@ -22,6 +22,7 @@ export default function Gallery() {
         sx={{
           mt: 4,
           display: "flex",
+          width:"75%",
           justifyContent: "center",
           alignItems: "center",
           bgcolor: "#094179",
@@ -30,7 +31,7 @@ export default function Gallery() {
           mb: 2
         }}
       >
-        <Typography variant="h3" component="h2" sx={{ textAlign: "center" }}>
+        <Typography variant="h3" component="h2" sx={{ textAlign: "center"}}>
           "Welcome to the Gallery!"
         </Typography>
       </Box>
